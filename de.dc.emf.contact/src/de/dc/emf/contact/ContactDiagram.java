@@ -8,6 +8,10 @@ import javafx.scene.input.MouseEvent;
 
 public class ContactDiagram extends EmfDiagramView {
 
+	public ContactDiagram() {
+		setText("Contact Diagram");
+	}
+	
 	@Override
 	protected Node renderSelection(Object arg0) {
 		Button button = new Button(arg0.toString());

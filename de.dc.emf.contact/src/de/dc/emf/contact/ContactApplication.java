@@ -16,15 +16,7 @@ public class ContactApplication extends EmfApplication{
 		propertyService.initializeProperties();
 
 		IEmfPluginService pluginService = EmfFXPlatform.getInstance(IEmfPluginService.class);
-		pluginService.init();
-		pluginService.getEmfPlugins().forEach(e->{
-			try {
-				workbench.registrateEditor(e.editor());
-				workbench.registratePerspective(e.perspective().newInstance());
-			} catch (InstantiationException | IllegalAccessException e1) {
-				e1.printStackTrace();
-			}
-		});
+		pluginService.init(workbench);
 	}
 	
 	public static void main(String[] args) {
