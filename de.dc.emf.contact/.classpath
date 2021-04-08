@@ -2,11 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="src-gen"/>
+	<classpathentry exported="true" kind="lib" path="libs/de.dc.emf.fx.workbench.jmetro.ui_1.0.0.202104082253.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/de.dc.emf.fx.workbench.jmetro.core_1.0.0.202104082231.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/jmetro-8.6.14.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/javassist.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/de.dc.emf.fx.workbench.jmetro.properties_0.1.0.202104082135.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/de.dc.emf.fx.workbench.jmetro.ui_1.0.0.202104082135.jar"/>
 	<classpathentry kind="lib" path="libs/reflections-0.9.12.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>

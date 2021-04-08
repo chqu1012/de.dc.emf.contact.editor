@@ -1,28 +1,24 @@
 package de.dc.emf.contact;
 
-import de.dc.emf.fx.workbench.jmetro.core.di.EmfFXPlatform;
+import com.google.inject.Inject;
+
 import de.dc.emf.fx.workbench.jmetro.core.di.IEmfPluginService;
-import de.dc.emf.fx.workbench.jmetro.properties.di.PropertiesModule;
 import de.dc.emf.fx.workbench.jmetro.properties.service.IPropertyService;
 import de.dc.emf.fx.workbench.jmetro.ui.EmfApplication;
 import de.dc.emf.fx.workbench.jmetro.ui.EmfWorkbench;
-import de.dc.emf.fx.workbench.jmetro.ui.di.EmfUIModule;
 
 public class ContactApplication extends EmfApplication{
 
+	@Inject IPropertyService propertyService;
+	@Inject IEmfPluginService pluginService;
+	
 	@Override
 	protected void initWorkbench(EmfWorkbench workbench) {
-		IPropertyService propertyService = EmfFXPlatform.getInstance(IPropertyService.class);
 		propertyService.initializeProperties();
-
-		IEmfPluginService pluginService = EmfFXPlatform.getInstance(IEmfPluginService.class);
 		pluginService.init(workbench);
 	}
 	
 	public static void main(String[] args) {
-		EmfFXPlatform.add(new PropertiesModule());
-		EmfFXPlatform.add(new EmfUIModule());
-		EmfFXPlatform.init();
 		launch(args);
 	}
 }
