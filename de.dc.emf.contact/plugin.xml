@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated contact -->
+      <package
+            uri="http://www.frateranatis.org/fx/emf/contact"
+            class="de.dc.emf.contact.ContactPackage"
+            genModel="model/contact.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated contact -->
+      <factory
+            uri="http://www.frateranatis.org/fx/emf/contact"
+            class="de.dc.emf.contact.provider.ContactItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               org.eclipse.emf.edit.provider.ITableItemLabelProvider"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="ContactEditorAdvisorApplication">
+      <!-- @generated contact -->
+      <application>
+         <run class="de.dc.emf.contact.provider.ContactEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated contact -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="de.dc.emf.contact.provider.ContactEditorAdvisor$Perspective"
+            id="de.dc.emf.contact.provider.ContactEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated contact -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.emf.contact.provider.ContactEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.emf.contact.provider.ContactEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated contact -->
+      <key
+            commandId="de.dc.emf.contact.provider.ContactEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="de.dc.emf.contact.provider.ContactEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated contact -->
+      <actionSet
+            label="%_UI_ContactEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="ContactEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="de.dc.emf.contact.provider.ContactEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="de.dc.emf.contact.provider.ContactEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="de.dc.emf.contact.provider.ContactEditorAdvisorOpenURICommand"
+               class="de.dc.emf.contact.provider.ContactEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="de.dc.emf.contact.provider.ContactEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="de.dc.emf.contact.provider.ContactEditorAdvisorOpenCommand"
+               class="de.dc.emf.contact.provider.ContactEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="de.dc.emf.contact.provider.ContactEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated contact -->
+      <actionSet
+            label="%_UI_ContactModelWizard_ActionSet_label"
+            visible="true"
+            id="de.dc.emf.contact.presentation.ContactActionBarContributorActionSet">
+         <action
+               label="%_UI_ContactModelWizard_label"
+               class="de.dc.emf.contact.presentation.ContactActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="de.dc.emf.contact.presentation.ContactActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated contact -->
+      <editor
+            id="de.dc.emf.contact.presentation.ContactEditorID"
+            name="%_UI_ContactEditor_label"
+            icon="icons/full/obj16/ContactModelFile.gif"
+            extensions="contact"
+            class="de.dc.emf.contact.presentation.ContactEditor"
+            contributorClass="de.dc.emf.contact.presentation.ContactActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

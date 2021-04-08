@@ -1,0 +1,41 @@
+@Ecore(nsURI="http://www.frateranatis.org/fx/emf/contact")
+@GenModel(
+	multipleEditorPages="false", 
+	creationIcons="false", 
+	editDirectory="/de.dc.emf.contact/src-gen",
+	editorDirectory="/de.dc.emf.contact/src-gen", 
+	modelDirectory="/de.dc.emf.contact/src-gen",
+	richClientPlatform="true", 
+	codeFormatting="true",
+	importerID="org.eclipse.emf.importer.ecore", 
+	runtimePlatform="RCP", 
+	fileExtensions="contact", 
+	modelName="Contact",
+	prefix="Contact", 
+	tableProviders="true",
+	generateExampleClass="false", 
+	revertAction="true", 
+	expandAllAction="true", 
+	decoration="Live", 
+	creationSubmenus="true", 
+	collapseAllAction="true",
+	autoResizeProperties="true", 
+	autoExpandProperties="1")
+package de.dc.emf.contact
+
+class ContactManager{
+	contains Contact[0..*] contacts
+	contains Group[0..*] groups
+}
+
+class Contact{
+	String firstname
+	String lastname
+	String email
+	Integer age
+}
+
+class Group{
+	String name
+	refers Contact[0..*] contacts
+}
