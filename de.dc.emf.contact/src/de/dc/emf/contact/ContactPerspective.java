@@ -6,6 +6,8 @@ import de.dc.emf.fx.workbench.jmetro.ui.EmfPerspective;
 public class ContactPerspective extends EmfPerspective{
 
 	public ContactPerspective() {
+		rightArea.getTabs().clear();
+		
 		ContactDiagram diagram = new ContactDiagram();
 		openViewAtRight(diagram);
 		rightArea.getSelectionModel().select(diagram);
