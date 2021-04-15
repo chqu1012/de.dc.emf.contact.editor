@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="src-gen"/>
+	<classpathentry exported="true" kind="lib" path="libs/de.dc.emf.fx.workbench.jmetro.data.h2_0.1.0.202104152317.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/de.dc.emf.fx.workbench.jmetro.ui_1.0.9.202104152056.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/jfxrt.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/de.dc.emf.fx.workbench.jmetro.core_1.0.0.202104082231.jar"/>
