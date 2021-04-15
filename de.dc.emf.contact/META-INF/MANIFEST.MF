@@ -11,7 +11,7 @@ Bundle-ClassPath: .,
  libs/jmetro-8.6.14.jar,
  libs/de.dc.emf.fx.workbench.jmetro.core_1.0.0.202104082231.jar,
  libs/jfxrt.jar,
- libs/de.dc.emf.fx.workbench.jmetro.ui_1.0.3.202104151920.jar
+ libs/de.dc.emf.fx.workbench.jmetro.ui_1.0.7.202104152027.jar
 Bundle-Activator: de.dc.emf.contact.provider.ContactEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

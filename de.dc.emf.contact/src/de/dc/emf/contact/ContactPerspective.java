@@ -11,6 +11,8 @@ public class ContactPerspective extends EmfPerspective{
 		ContactDiagram diagram = new ContactDiagram();
 		openViewAtRight(diagram);
 		rightArea.getSelectionModel().select(diagram);
+		
+		openViewAtRight(new ContactTableView());
 	}
 	
 	@Override
