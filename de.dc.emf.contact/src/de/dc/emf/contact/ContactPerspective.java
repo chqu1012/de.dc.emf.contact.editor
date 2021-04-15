@@ -24,5 +24,4 @@ public class ContactPerspective extends EmfPerspective{
 	public String getName() {
 		return "Contact Perspective";
 	}
-
 }

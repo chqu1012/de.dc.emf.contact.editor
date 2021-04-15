@@ -31,5 +31,4 @@ public class ContactTableView extends EmfTableView<Contact>{
 		contact.setEmail(firstname.concat(lastname).concat("@mail.com"));
 		getMasterData().add(contact);
 	}
-
 }
