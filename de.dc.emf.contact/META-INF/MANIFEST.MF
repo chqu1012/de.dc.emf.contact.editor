@@ -6,13 +6,16 @@ Automatic-Module-Name: de.dc.emf.contact
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .,
  libs/reflections-0.9.12.jar,
- libs/de.dc.emf.fx.workbench.jmetro.properties_0.1.0.202104082135.jar,
  libs/javassist.jar,
  libs/jmetro-8.6.14.jar,
- libs/de.dc.emf.fx.workbench.jmetro.core_1.0.0.202104082231.jar,
  libs/jfxrt.jar,
- libs/de.dc.emf.fx.workbench.jmetro.data.h2_0.1.0.202104152317.jar,
- libs/h2-1.4.200.jar
+ libs/h2-1.4.200.jar,
+ libs/MonacoFX-0.0.7.jar,
+ libs/emf.workbench/core/de.dc.emf.fx.workbench.jmetro.core_1.0.1.202104162046.jar,
+ libs/emf.workbench/h2/de.dc.emf.fx.workbench.jmetro.data.h2_0.1.0.202104152317.jar,
+ libs/emf.workbench/monaco/de.dc.emf.fx.workbench.jmetro.ui.monaco_0.1.0.202104162045.jar,
+ libs/emf.workbench/properties/de.dc.emf.fx.workbench.jmetro.properties_0.1.0.202104082135.jar,
+ libs/emf.workbench/ui/de.dc.emf.fx.workbench.jmetro.ui_1.0.10.202104162046.jar
 Bundle-Activator: de.dc.emf.contact.provider.ContactEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -31,6 +34,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  com.google.inject;bundle-version="3.0.0",
  javax.inject;bundle-version="1.0.0",
- org.apache.commons.io;bundle-version="2.6.0",
- de.dc.emf.fx.workbench.jmetro.ui;bundle-version="1.0.9"
+ org.apache.commons.io;bundle-version="2.6.0"
 Bundle-ActivationPolicy: lazy
