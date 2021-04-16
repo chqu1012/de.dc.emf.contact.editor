@@ -1,5 +1,7 @@
-package de.dc.emf.contact;
+package de.dc.emf.contact.view;
 
+import de.dc.emf.contact.Contact;
+import de.dc.emf.contact.ContactFactory;
 import de.dc.emf.fx.workbench.jmetro.ui.EmfTableView;
 
 public class ContactTableView extends EmfTableView<Contact>{

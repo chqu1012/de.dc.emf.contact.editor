@@ -1,4 +1,4 @@
-package de.dc.emf.contact;
+package de.dc.emf.contact.view;
 
 import de.dc.emf.fx.workbench.jmetro.ui.EmfDiagramView;
 import de.dc.emf.fx.workbench.jmetro.ui.util.DraggableNode;
