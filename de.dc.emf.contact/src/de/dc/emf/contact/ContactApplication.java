@@ -20,6 +20,5 @@ public class ContactApplication extends EmfApplication implements ChangeListener
 
 	@Override
 	public void changed(ObservableValue arg0, Object arg1, Object arg2) {
-		System.out.println(arg2);
 	}
 }
